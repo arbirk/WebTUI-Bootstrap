@@ -1,0 +1,63 @@
+@layer base, utils, components;
+
+@layer base {
+    :root {
+        --font-size: 18px;
+        --font-weight-bold: 700;
+        --font-weight-normal: 400;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--base) !important; 
+    color: var(--text) !important;
+    font-family: var(--font-family) !important;
+    font-size: var(--font-size) !important;
+    line-height: var(--line-height) !important;
+    
+    
+    a { color: var(--blue) !important; } 
+    a:hover { color: var(--lavender) !important; }
+    h1, h2, h3, h4, h5, h6 { 
+        color: var(--text) !important; 
+        margin-bottom: 0.5rem !important; 
+        font-weight: var(--font-weight-bold) !important;
+        font-size: var(--font-size) !important;
+    }
+    p { color: var(--text) !important; margin-bottom: 1rem !important; }
+ 
+}
+
+[class^="nf-"], [class*=" nf-"] {
+    font-family: 'Symbols Nerd Font', var(--font-family-monospace, monospace) !important;
+}
+
+.nf-dev-git_branch::before {
+    content: "\e725";
+    display: inline-block;
+}
+
+.nf-md-arrow_left::before {
+    content: "\f0797"; 
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .container-md {
+        max-width: 768px !important;
+    }
+}
+
+#topsqcontent { 
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0px;
+  padding-top: 8px;
+}
+#topsqbuttons { 
+  display: flex; 
+  justify-content: flex-end; 
+}
